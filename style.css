@@ -4,11 +4,21 @@ RESET
 
 */
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* 
 **************
 COMMON
 
 */
+
+:root {
+  --navbar-color: #000000;
+}
 
 /* 
 **************
@@ -20,12 +30,147 @@ TYPOGRAPHY
   font-family: 'Montserrat', sans-serif;
 }
 
+header p {
+  color: #717171;
+  font-weight: 1000;
+  font-size: 0.875rem;
+}
+
+header h4 {
+  color: white;
+}
+
+#p-name-playlist {
+  font-size: 1.0625rem;
+}
+
+.row-profile p {
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
 /* 
 **************
 HEADER
 
 
 */
+
+.container-navbar {
+  background-color: var(--navbar-color);
+  width: 14.0625rem;
+  height: 100vh;
+  padding: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid palevioletred;
+}
+
+.box-navbar {
+  border: 1px dashed rgb(5, 255, 5);
+}
+
+.logo {
+  padding-bottom: 0.625rem;
+}
+#logosmall {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  border: 1px dashed red;
+  align-items: center;
+  align-content: center;
+}
+
+.img-menu {
+  border: 1px solid white;
+  width: 1.875rem;
+  opacity: 0.7;
+}
+
+.text-menu {
+  display: flex;
+
+  align-self: center;
+}
+
+.playlist {
+  margin-top: 1.5625rem;
+
+  border: 1px dashed rgb(0, 255, 149);
+}
+
+.create-playlist {
+  display: flex;
+  border: 1px solid violet;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #a3a3a3;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.row-playlist {
+  display: flex;
+  border: 1px solid violet;
+}
+
+.text-playlist {
+  border: 1px dashed blue;
+  display: flex;
+  align-items: center;
+}
+
+.name-playlist {
+  border: 1px dashed blue;
+  margin-top: 0.3125rem;
+  margin-bottom: 0.3125rem;
+}
+.box-ender-header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid blueviolet;
+  justify-content: flex-end;
+}
+
+.install-app {
+  display: flex;
+
+  border-bottom: 1px solid #717171;
+  width: 100%;
+  gap: 0.9375rem;
+}
+
+#img-download {
+  width: 1.25rem;
+}
+
+.profile {
+  margin-top: 0.625rem;
+  border: 1px solid red;
+}
+
+#img-profile {
+  display: flex;
+  background-color: #a3a3a3;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: cover;
+}
+
+.row-profile {
+  display: flex;
+  border: 1px solid white;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+}
 
 /* 
 **************
@@ -38,3 +183,59 @@ MAIN
 FOOTER
 
 */
+
+/* 
+**************
+RESPONSIVE
+*/
+
+/* 
+medium
+ */
+@media screen and (max-width: 992px) {
+}
+
+/* 
+small
+ */
+@media screen and (max-width: 768px) {
+}
+
+/* 
+extrasmall
+ */
+@media screen and (max-width: 576px) {
+  .container-navbar {
+    width: 2.8125rem;
+  }
+
+  #logosmall,
+  #img-download {
+    display: block;
+  }
+
+  #logobig {
+    display: none;
+  }
+
+  .container-navbar {
+    padding: 0.3125rem;
+  }
+
+  .text-menu {
+    display: none;
+  }
+
+  .playlist,
+  .row-playlist,
+  .name-playlist,
+  #none-install-app,
+  .row-profile p {
+    display: none;
+  }
+
+  .install-app,
+  .row-profile {
+    justify-content: center;
+  }
+}
