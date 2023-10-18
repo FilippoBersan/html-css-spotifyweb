@@ -16,9 +16,21 @@ COMMON
 
 */
 
+body {
+  display: flex;
+}
+
 :root {
   --navbar-color: #000000;
 }
+
+header {
+  width: 18%;
+  height: 100vh;
+  /* border: 1px solid green; */
+}
+
+
 
 /* 
 **************
@@ -33,7 +45,7 @@ TYPOGRAPHY
 header p {
   color: #717171;
   font-weight: 1000;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
 }
 
 header h4 {
@@ -46,7 +58,7 @@ header h4 {
 
 .row-profile p {
   color: white;
-  font-size: 1.125rem;
+  font-size: 1.002rem;
   font-weight: 600;
 }
 /* 
@@ -56,10 +68,12 @@ HEADER
 
 */
 
+
 .container-navbar {
   background-color: var(--navbar-color);
-  width: 14.0625rem;
+
   height: 100vh;
+
   padding: 0.9375rem;
   display: flex;
   flex-direction: column;
@@ -67,11 +81,15 @@ HEADER
 }
 
 .box-navbar {
-  border: 1px dashed rgb(5, 255, 5);
+  /* border: 1px dashed rgb(5, 255, 5); */
 }
 
 .logo {
   padding-bottom: 0.625rem;
+}
+
+#logobig {
+  max-width: 9.375rem;
 }
 #logosmall {
   display: none;
@@ -121,14 +139,16 @@ HEADER
 
 .text-playlist {
   border: 1px dashed blue;
+  max-width: 15.625rem
   display: flex;
   align-items: center;
 }
 
 .name-playlist {
   border: 1px dashed blue;
-  margin-top: 0.3125rem;
-  margin-bottom: 0.3125rem;
+
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 .box-ender-header {
   display: flex;
@@ -169,7 +189,7 @@ HEADER
   border: 1px solid white;
   justify-content: center;
   gap: 1.25rem;
-  width: 100%;
+
 }
 
 /* 
@@ -177,6 +197,8 @@ HEADER
 MAIN
 
 */
+
+
 
 /* 
 **************
@@ -190,23 +212,45 @@ RESPONSIVE
 */
 
 /* 
+large
+ */
+@media screen and (max-width: 1200px) {
+}
+
+/* 
 medium
  */
 @media screen and (max-width: 992px) {
+   .container-name-playlist {
+    overflow: scroll;
+    scrollbar-color: rgb(193, 193, 193);
+  }
 }
 
 /* 
 small
  */
 @media screen and (max-width: 768px) {
+  .container-name-playlist {
+    overflow: scroll;
+    scrollbar-color: rgb(193, 193, 193);
+  }
+ 
 }
 
 /* 
 extrasmall
  */
 @media screen and (max-width: 576px) {
+
+header,
+main{
+max-height: 36.375rem
+}
+
   .container-navbar {
-    width: 2.8125rem;
+   width: 2.8125rem;
+   height: 100%;
   }
 
   #logosmall,
@@ -238,4 +282,8 @@ extrasmall
   .row-profile {
     justify-content: center;
   }
+
+
+
+
 }
