@@ -17,20 +17,14 @@ COMMON
 */
 
 body {
-  display: flex;
+  height: 100vh;
 }
 
 :root {
   --navbar-color: #000000;
+  --main-color: #141922;
+  --footer-color: #282828;
 }
-
-header {
-  width: 18%;
-  height: 100vh;
-  /* border: 1px solid green; */
-}
-
-
 
 /* 
 **************
@@ -53,7 +47,7 @@ header h4 {
 }
 
 #p-name-playlist {
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
 }
 
 .row-profile p {
@@ -61,6 +55,13 @@ header h4 {
   font-size: 1.002rem;
   font-weight: 600;
 }
+
+.top-element {
+  height: calc(100% - 5.625rem);
+  background-color: var(--main-color);
+  display: flex;
+}
+
 /* 
 **************
 HEADER
@@ -68,16 +69,19 @@ HEADER
 
 */
 
+header {
+  display: flex;
+  flex-shrink: 0;
+}
 
 .container-navbar {
-  background-color: var(--navbar-color);
-
-  height: 100vh;
-
-  padding: 0.9375rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid palevioletred;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  background-color: var(--navbar-color);
+  height: 100%;
+  padding: 0.9375rem;
 }
 
 .box-navbar {
@@ -97,14 +101,12 @@ HEADER
 
 .menu {
   display: flex;
-  border: 1px dashed red;
   align-items: center;
   align-content: center;
 }
 
 .img-menu {
-  border: 1px solid white;
-  width: 1.875rem;
+  width: 1.5625rem;
   opacity: 0.7;
 }
 
@@ -115,16 +117,20 @@ HEADER
 }
 
 .playlist {
-  margin-top: 1.5625rem;
+  /* margin-top: 1.5625rem; */
 
-  border: 1px dashed rgb(0, 255, 149);
+  /* border: 1px dashed rgb(0, 255, 149); */
+}
+
+.container-name-playlist {
+  overflow: hidden;
 }
 
 .create-playlist {
   display: flex;
-  border: 1px solid violet;
+  /* border: 1px solid violet; */
   width: 2.1875rem;
-  height: 2.1875rem;
+  /* height: 2.1875rem; */
   background-color: #a3a3a3;
   align-items: center;
   justify-content: center;
@@ -134,18 +140,19 @@ HEADER
 
 .row-playlist {
   display: flex;
-  border: 1px solid violet;
+
+  /* border: 1px solid violet; */
 }
 
 .text-playlist {
-  border: 1px dashed blue;
-  max-width: 15.625rem
+  /* border: 1px dashed blue; */
+  /* max-width: 15.625rem */
   display: flex;
   align-items: center;
 }
 
 .name-playlist {
-  border: 1px dashed blue;
+  /* border: 1px dashed blue; */
 
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
@@ -153,9 +160,10 @@ HEADER
 .box-ender-header {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  border: 1px solid blueviolet;
+
+  /* border: 1px solid blueviolet; */
   justify-content: flex-end;
+  margin-top: auto;
 }
 
 .install-app {
@@ -171,7 +179,7 @@ HEADER
 }
 
 .profile {
-  margin-top: 0.625rem;
+  /* margin-top: 0.625rem; */
   border: 1px solid red;
 }
 
@@ -180,7 +188,7 @@ HEADER
   background-color: #a3a3a3;
   border-radius: 50%;
   width: 1.25rem;
-  height: 1.25rem;
+  /* height: 1.25rem; */
   object-fit: cover;
 }
 
@@ -189,7 +197,6 @@ HEADER
   border: 1px solid white;
   justify-content: center;
   gap: 1.25rem;
-
 }
 
 /* 
@@ -198,13 +205,26 @@ MAIN
 
 */
 
+main {
+  flex-grow: 1;
+}
 
+.right-bar {
+  height: 5.3125rem;
+  background-color: var(--navbar-color);
+  opacity: 0.3;
+}
 
 /* 
 **************
 FOOTER
 
 */
+
+footer {
+  height: 5.625rem;
+  background-color: var(--footer-color);
+}
 
 /* 
 **************
@@ -221,7 +241,7 @@ large
 medium
  */
 @media screen and (max-width: 992px) {
-   .container-name-playlist {
+  .container-name-playlist {
     overflow: scroll;
     scrollbar-color: rgb(193, 193, 193);
   }
@@ -235,22 +255,20 @@ small
     overflow: scroll;
     scrollbar-color: rgb(193, 193, 193);
   }
- 
 }
 
 /* 
 extrasmall
  */
 @media screen and (max-width: 576px) {
-
-header,
-main{
-max-height: 36.375rem
-}
+  header,
+  main {
+    max-height: 36.375rem;
+  }
 
   .container-navbar {
-   width: 2.8125rem;
-   height: 100%;
+    width: 2.8125rem;
+    height: 100%;
   }
 
   #logosmall,
@@ -282,8 +300,4 @@ max-height: 36.375rem
   .row-profile {
     justify-content: center;
   }
-
-
-
-
 }
