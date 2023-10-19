@@ -61,6 +61,20 @@ header h4 {
   color: #717171;
 }
 
+.albums h1 {
+  color: white;
+}
+
+.box strong {
+  color: white;
+  font-size: 0.875rem;
+}
+
+.box p {
+  color: #717171;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
 /* 
 **************
 HEADER
@@ -212,6 +226,7 @@ MAIN
 
 main {
   flex-grow: 1;
+  overflow: scroll;
 }
 
 .right-bar {
@@ -243,6 +258,7 @@ main {
 
 .container-categories {
   padding: 0.3125rem;
+  padding-bottom: 3.125rem;
   display: flex;
   justify-content: center;
   gap: 1.25rem;
@@ -257,6 +273,31 @@ main {
 }
 
 .unselect-categories {
+}
+
+.albums {
+  padding: 1.25rem;
+  border: 3px dashed greenyellow;
+}
+
+.container-played {
+  display: flex;
+  border: 2px solid red;
+  gap: 0.625rem;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  width: calc(100% / 6);
+  /* background-color: #a3a3a3; */
+  text-align: center;
+}
+
+.box img {
+  display: block;
+  width: 100%;
 }
 /* 
 **************
@@ -287,6 +328,14 @@ medium
   .container-name-playlist {
     overflow: scroll;
     scrollbar-color: rgb(193, 193, 193);
+  }
+
+  footer {
+    overflow: hidden;
+  }
+
+  .container-played {
+    flex-wrap: wrap;
   }
 }
 
