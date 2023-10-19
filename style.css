@@ -65,12 +65,14 @@ header h4 {
   color: white;
 }
 
-.box strong {
+.box strong,
+#strong-p-a {
   color: white;
   font-size: 0.875rem;
 }
 
-.box p {
+.box p,
+#subtitle {
   color: #717171;
   font-weight: 600;
   font-size: 0.75rem;
@@ -284,6 +286,7 @@ main {
   display: flex;
   border: 2px solid red;
   gap: 0.625rem;
+  padding-bottom: 1.25rem;
 }
 
 .box {
@@ -297,6 +300,20 @@ main {
 
 .box img {
   display: block;
+  width: 100%;
+}
+
+.box-artist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+  width: calc(100% / 6);
+  /* background-color: #a3a3a3; */
+  text-align: center;
+  border-radius: 50%;
+  object-fit: fill;
+}
+.box-artist img {
   width: 100%;
 }
 /* 
