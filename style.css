@@ -138,7 +138,7 @@ header {
 }
 
 .container-name-playlist {
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .create-playlist {
@@ -278,7 +278,7 @@ main {
 }
 
 .albums {
-  padding: 1.25rem;
+  padding: 0.625rem;
   border: 3px dashed greenyellow;
 }
 
@@ -325,6 +325,10 @@ FOOTER
 footer {
   height: 5.625rem;
   background-color: var(--footer-color);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 /* 
@@ -354,6 +358,12 @@ medium
   .container-played {
     flex-wrap: wrap;
   }
+
+  .box {
+    width: calc(100% / 5);
+    display: flex;
+    align-content: space-around;
+  }
 }
 
 /* 
@@ -363,6 +373,11 @@ small
   .container-name-playlist {
     overflow: scroll;
     scrollbar-color: rgb(193, 193, 193);
+  }
+
+  .box {
+    width: calc(100% / 3);
+    display: flex;
   }
 }
 
