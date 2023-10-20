@@ -160,10 +160,11 @@ header {
 }
 
 .text-playlist {
-  /* border: 1px dashed blue; */
-  /* max-width: 15.625rem */
+  border: 1px dashed blue;
+
   display: flex;
   align-items: center;
+  margin-left: 0.625rem;
 }
 
 .name-playlist {
@@ -184,7 +185,7 @@ header {
 .install-app {
   display: flex;
 
-  border-bottom: 1px solid #717171;
+  /* border-bottom: 1px solid #717171; */
   width: 100%;
   gap: 0.9375rem;
 }
@@ -195,7 +196,7 @@ header {
 
 .profile {
   /* margin-top: 0.625rem; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #img-profile {
@@ -209,8 +210,8 @@ header {
 
 .row-profile {
   display: flex;
-  border: 1px solid white;
-  justify-content: center;
+  /* border: 1px solid white; */
+  margin-top: 0.625rem;
   gap: 1.25rem;
 }
 
@@ -284,6 +285,7 @@ main {
 
 .container-played {
   display: flex;
+  width: 100%;
   border: 2px solid red;
   gap: 0.625rem;
   padding-bottom: 1.25rem;
@@ -293,7 +295,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.3125rem;
-  width: calc(100% / 6);
+  width: calc((100% - 10px) / 6);
   /* background-color: #a3a3a3; */
   text-align: center;
 }
@@ -307,7 +309,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.3125rem;
-  width: calc(100% / 6);
+  width: calc((100% - 10px) / 6);
   /* background-color: #a3a3a3; */
   text-align: center;
   border-radius: 50%;
@@ -360,7 +362,7 @@ medium
   }
 
   .box {
-    width: calc(100% / 5);
+    width: calc((100% - 0.625rem) / 5);
     display: flex;
     align-content: space-around;
   }
